@@ -26,7 +26,7 @@ h3 {
   }
 }
 h5 {
-  color: $primary;
+  // color: $primary;
   @media (max-width: map_get($breakpoints, "md")) {
     font-size: $font-size-base;
   }

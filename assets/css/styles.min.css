@@ -6124,9 +6124,6 @@ body {
   font-size: 0.95rem;
   font-family: "Sniglet", cursive;
   font-weight: 400;
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -6142,10 +6139,6 @@ h3 {
   h3 {
     font-size: 1.5rem;
   }
-}
-
-h5 {
-  color: #7b6dad;
 }
 
 @media (max-width: 768px) {
@@ -6177,10 +6170,6 @@ ul {
   margin: 0;
   padding: 0;
   list-style: none;
-}
-
-.cursor-pointer {
-  cursor: pointer;
 }
 
 .btn,
@@ -6801,6 +6790,10 @@ a.btn-warning {
   color: #ffffff;
 }
 
+.progrm_slider .program_card .card-header .amount_circle .month_title {
+  color: #ffffff !important;
+}
+
 .progrm_slider .program_card .card-header .amount_circle span {
   font-family: "Lato", sans-serif;
   text-transform: uppercase;
@@ -7036,18 +7029,38 @@ a.btn-warning {
 
 .parents_section .parents_section_cloud {
   position: absolute;
-  bottom: 0;
+  bottom: 50px;
   z-index: 4;
   width: 100%;
 }
 
+@media (max-width: 576px) {
+  .parents_section .parents_section_cloud {
+    bottom: 0;
+  }
+}
+
 .parents_section .parents_card {
   padding: 0;
+  padding-bottom: 50px !important;
+  background: transparent;
+}
+
+@media (max-width: 576px) {
+  .parents_section .parents_card {
+    padding: 0 !important;
+  }
 }
 
 .parents_section .parents_card .card-img {
-  height: 300px;
+  height: 350px;
   width: 100%;
+}
+
+@media (max-width: 576px) {
+  .parents_section .parents_card .card-img {
+    height: 300px;
+  }
 }
 
 .parents_section .parents_card .card-img-overlay {
@@ -7086,6 +7099,10 @@ a.btn-warning {
     padding-left: 20px;
     margin-top: 20px;
   }
+}
+
+.footer h5 {
+  color: #7b6dad;
 }
 
 .footer .copyright_block {

@@ -253,7 +253,9 @@
                 align-items: center;
                 z-index: 2;
                 color: $white;
-
+                .month_title {
+                    color: $white !important;
+                }
                 span {
                     font-family: $font-family-secondary;
                     text-transform: uppercase;
@@ -421,15 +423,26 @@
     position: relative;
     .parents_section_cloud {
         position: absolute;
-        bottom: 0;
+        bottom: 50px;
         z-index: 4;
         width: 100%;
+        @media (max-width: map_get($breakpoints, "sm")) {
+            bottom: 0;
+        }
     }
     .parents_card {
         padding: 0;
+        padding-bottom: 50px !important;
+        background: transparent;
+        @media (max-width: map_get($breakpoints, "sm")) {
+            padding: 0 !important;
+        }
         .card-img {
-            height: 300px;
+            height: 350px;
             width: 100%;
+            @media (max-width: map_get($breakpoints, "sm")) {
+                height: 300px;
+            }
         }
         .card-img-overlay {
             @include flex-properties(flex, column, null, null, center, null);
