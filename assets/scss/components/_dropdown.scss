@@ -1,0 +1,83 @@
+/* Sub Menu */
+.has-submenu {
+    position: relative;
+    .list-menu-items {
+        position: relative;
+        background-color: white;
+        display: block;
+        padding: 7px 10px;
+        color: $dark;
+        .menu-link {
+            font-size: $font-size-base;
+            color: $dark;
+            text-transform: capitalize;
+            display: block;
+        }
+        &:hover,
+        &.active,
+        &:active {
+            background-color: $pink;
+            color: $white;
+            transition: all 0.4s ease-in-out;
+        }
+    }
+    .submenu {
+        position: absolute;
+        left: 0;
+        top: 30px;
+        right: 0;
+        width: 200px;
+        border: 1px solid gray;
+        opacity: 0;
+        visibility: hidden;
+
+        z-index: 2;
+
+        &:hover {
+            &::before {
+                right: -12px;
+                top: 6px;
+                transform: rotate(180deg);
+                border-color: transparent transparent transparent #ec277a;
+                transition: all 0.4s ease-in-out;
+                z-index: 9;
+                @media (max-width: map_get($breakpoints, "sm")) {
+                    opacity: 0;
+                }
+            }
+        }
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            right: 0px;
+            top: 20px;
+            z-index: 10 !important;
+            transform: translateY(-50%);
+            border-style: solid;
+            border-width: 10px;
+            border-color: transparent transparent transparent $pink;
+            transition: all 0.4s ease-in-out;
+        }
+    }
+    .submenu2 {
+        left: 212px;
+        top: 0px;
+        @media (max-width: map_get($breakpoints, "sm")) {
+            left: 0;
+            top: 100px;
+        }
+        &:hover {
+            &::before {
+                opacity: 0;
+            }
+        }
+    }
+    &:hover {
+        .submenu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+    }
+}

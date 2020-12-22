@@ -1,1 +1,772 @@
+<!doctype html>
+<html lang="en">
 
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Bloom | Home</title>
+  <!-- favicon -->
+  <link rel="shortcut icon" type="image/png" href="./assets/images/favicon.ico">
+  <!-- custom stylesheet -->
+  <link rel="stylesheet" href="./assets/css/styles.min.css">
+  <!-- google fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Sniglet:wght@400;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <!-- swiper js -->
+  <link rel="stylesheet" href="./assets/scss/vendor/css/swiper-bundle.min.css" />
+</head>
+
+<body>
+  <!-- main wrapper -->
+  <div class="main_wrapper">
+
+    <!-- header -->
+    <nav class="main_header navbar navbar-expand-lg">
+      <div class="container">
+        <div class="logo_row">
+          <a class="navbar-brand" href="index.html">
+            <img src="./assets/images/logo.png" class="logo" alt="">
+          </a>
+          <button class="btn toggle_bars_btn d-flex d-lg-none" onclick="toggleSidebar()" type="button"
+            aria-label="Toggle navigation">
+            <img src="./assets/images/icons/bars_icon.svg" class="toggle_icons" alt="Bar Icon">
+          </button>
+        </div>
+        <div class="collapse navbar-collapse" id="header_nav">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link dark" href="#">About</a>
+            </li>
+            <li class="nav-item has-submenu">
+              <a class="nav-link dropdown-toggle" href="#" id="dropdown_btn" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                Programs
+              </a>
+              <ul class="submenu">
+                <li class="list-menu-items has-submenu">
+                  <a href="#home" class="menu-link">
+                    <span class="fa fa-user-o menu-icon"></span>
+                    <span class="pl-1 menu-items"> home </span>
+                  </a>
+                  <ul class="submenu submenu2">
+                    <li class="list-menu-items">
+                      <a href="#home" class="menu-link">
+                        <span class="fa fa-user-o menu-icon"></span>
+                        <span class="pl-1 menu-items"> home </span>
+                      </a>
+
+                    </li>
+                    <li class="list-menu-items">
+                      <a href="#admin" class="menu-link">
+                        <span class="fa fa-user-o menu-icon"></span>
+                        <span class="pl-1 menu-items"> admin </span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="list-menu-items">
+                  <a href="#admin" class="menu-link">
+                    <span class="fa fa-user-o menu-icon"></span>
+                    <span class="pl-1 menu-items"> admin </span>
+                  </a>
+                </li>
+                <li class="list-menu-items">
+                  <a href="#about" class="menu-link">
+                    <span class="fa fa-user-o menu-icon"></span>
+                    <span class="pl-1 menu-items"> about </span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link success" href="#">Calendar</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link primary" href="#">admission</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link orange" href="#">parents info</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link blue" href="#">birthday party</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link dark" href="#">media</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">contact us</a>
+            </li>
+          </ul>
+          <div class="contact_block">
+            <img src="./assets/images/icons/phone_icon.png" class="icons" alt="Phone Icon">
+            <div class="contact_text_block">
+              <span>Have any Questions?</span>
+              <span>(345)746-4444</span>
+            </div>
+            <img src="./assets/images/icons/location_icon.png" class="icons" alt="Location Icon">
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- ends: header -->
+
+    <!-- primary-nav sidebar -->
+    <aside class="main_header primary_nav" id="primary_nav">
+      <div class="navbar">
+        <div class="logo_row">
+          <a class="navbar-brand" href="index.html">
+            <img src="./assets/images/logo.png" class="logo" alt="">
+          </a>
+          <button class="btn toggle_bars_btn" id="close_icon" onclick="toggleSidebar()" type="button">
+            <img src="./assets/images/icons/close_icon.svg" class="toggle_icons" alt="Bar Icon">
+          </button>
+        </div>
+        <div class="content-body" id="header_nav">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link dark" href="#">About</a>
+            </li>
+            <li class="nav-item has-submenu">
+              <a class="nav-link dropdown-toggle" href="#" id="dropdown_btn" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                Programs
+              </a>
+              <ul class="submenu">
+                <li class="list-menu-items has-submenu">
+                  <a href="#home" class="menu-link">
+                    <span class="fa fa-user-o menu-icon"></span>
+                    <span class="pl-1 menu-items"> home </span>
+                  </a>
+                  <ul class="submenu submenu2">
+                    <li class="list-menu-items">
+                      <a href="#home" class="menu-link">
+                        <span class="fa fa-user-o menu-icon"></span>
+                        <span class="pl-1 menu-items"> home </span>
+                      </a>
+
+                    </li>
+                    <li class="list-menu-items">
+                      <a href="#admin" class="menu-link">
+                        <span class="fa fa-user-o menu-icon"></span>
+                        <span class="pl-1 menu-items"> admin </span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="list-menu-items">
+                  <a href="#admin" class="menu-link">
+                    <span class="fa fa-user-o menu-icon"></span>
+                    <span class="pl-1 menu-items"> admin </span>
+                  </a>
+                </li>
+                <li class="list-menu-items">
+                  <a href="#about" class="menu-link">
+                    <span class="fa fa-user-o menu-icon"></span>
+                    <span class="pl-1 menu-items"> about </span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link success" href="#">Calendar</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link primary" href="#">admission</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link orange" href="#">parents info</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link blue" href="#">birthday party</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link dark" href="#">media</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">contact us</a>
+            </li>
+          </ul>
+          <div class="contact_block">
+            <img src="./assets/images/icons/phone_icon.png" class="icons" alt="Phone Icon">
+            <div class="contact_text_block">
+              <span>Have any Questions?</span>
+              <span>(345)746-4444</span>
+            </div>
+            <img src="./assets/images/icons/location_icon.png" class="icons" alt="Location Icon">
+          </div>
+        </div>
+      </div>
+    </aside>
+    <!-- ends: primary-nav sidebar -->
+
+    <!-- main content -->
+    <main class="content_wrapper">
+      <!-- banner slider -->
+      <section class="banner_slider swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="./assets/images/banners/slider1.png" class="banner_slide_img" alt="slide1">
+            <div class="container">
+              <div class="banner_card card">
+                <h3>Play & Learn How To<br> Create New Things</h3>
+                <p>Get your kids excited about discoverning<br>something new by disguishing the<br>learning activities
+                  as fun time</p>
+                <button type="button" class="btn btn-warning">read more</button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="./assets/images/programs1.png" class="banner_slide_img" alt="slide2">
+            <div class="container">
+              <div class="banner_card card">
+                <h3>Learn How To<br> Create New Things</h3>
+                <p>Get your kids excited about discoverning<br>something new by disguishing the<br>learning activities
+                  as fun time</p>
+                <button type="button" class="btn btn-warning">read more</button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="./assets/images/programs3.png" class="banner_slide_img" alt="slide3">
+            <div class="container">
+              <div class="banner_card card">
+                <h3>Play & Learn How To<br> Create New Things</h3>
+                <p>Get your kids excited about discoverning<br>something new by disguishing the<br>learning activities
+                  as fun time</p>
+                <button type="button" class="btn btn-warning">read more</button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="./assets/images/programs4.png" class="banner_slide_img" alt="slide4">
+            <div class="container">
+              <div class="banner_card card">
+                <h3>Play How To<br> Create New Things</h3>
+                <p>Get your kids excited about discoverning<br>something new by disguishing the<br>learning activities
+                  as fun time</p>
+                <button type="button" class="btn btn-warning">read more</button>
+              </div>
+            </div>
+          </div>
+          <img src="./assets/images/cloud.png" class="banner_cloud" alt="Banner Cloud">
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+      </section>
+      <!-- welcome section -->
+      <section class="common_section welcome_section">
+        <img src="./assets/images/tools.png" class="tools_img" alt="tools">
+        <div class="container">
+          <div class="notification_row">
+            <label class="notification_label">Notification</label>
+            <div class="marquee_row">
+              <marquee>
+                <ul>
+                  <li>
+                    <span class="dot"></span>
+                    Coronavirus: Schools, colleges and multiplexes to remain shut till March 29 in Cyman Island
+                  </li>
+                  <li>
+                    <span class="dot"></span>
+                    Coronavirus: Schools, colleges and multiplexes to remain shut till March 29 in Cyman Island
+                  </li>
+                </ul>
+              </marquee>
+            </div>
+          </div>
+          <div class="welcome_row row">
+            <div class="col-md-6 pl-0">
+              <h3>Welcome to bloom learning center</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti eveniet ullam possimus culpa sed,
+                fugit tenetur. Animi non similique eveniet.Deleniti eveniet ullam possimus culpa sed,
+                fugit tenetur. Animi non similique eveniet.</p>
+              <ul class="custom_nav nav flex-column">
+                <li><span class="arrow"></span>International reputation</li>
+                <li><span class="arrow"></span>Prepares future leaders</li>
+                <li><span class="arrow"></span>Moral and spiritual compass</li>
+                <li><span class="arrow"></span>Curriculumn and instruction</li>
+              </ul>
+              <a href="#" class="btn btn-warning">read more</a>
+            </div>
+            <div class="col-md-6 px-0 px-md-auto mt-4 mt-md-0">
+              <div class="video_block">
+                <div class="overlay">
+                  <img src="./assets/images/video_img1.png" class="video_img" alt="video_img">
+                  <a href="#" class="video_link" data-toggle="modal" data-target="#videoModal">
+                    <img src="./assets/images/icons/youtube_video_icon.png" class="video_icon" alt="video icon">
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <img src="./assets/images/notification_bg.png" class="notification_img" alt="tools">
+      </section>
+      <!-- our program section -->
+      <section class="program_section">
+        <img src="./assets/images/cloud3.png" class="program_cloud" alt="program_cloud">
+        <div class="container">
+          <h3 class="title">Our Programs</h3>
+          <div class="progrm_slider swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="program_card card">
+                  <div class="card-header">
+                    <img src="./assets/images/programs1.png" class="program_img" alt="program1">
+                    <div class="amount_circle amt_secondary">
+                      <h5>$945</h5>
+                      <span>monthly</span>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">Infant Program</h5>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati optio, explicabo ea quaerat
+                      dolorum animi.
+                    </p>
+                    <div class="children_detail_row">
+                      <div class="child_block">
+                        <p>Years Old</p>
+                        <span>6 week to 1.5 Years</span>
+                      </div>
+                      <div class="child_block">
+                        <p>Class size</p>
+                        <span>12 kids</span>
+                      </div>
+                      <div class="child_block">
+                        <p>time</p>
+                        <span>8:30 AM</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="program_card card">
+                  <div class="card-header">
+                    <img src="./assets/images/programs2.png" class="program_img program_imgs" alt="program2">
+                    <div class="amount_circle amt_primary">
+                      <h5>$945</h5>
+                      <span>monthly</span>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">Toddler Program</h5>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati optio, explicabo ea quaerat
+                      dolorum animi.
+                    </p>
+                    <div class="children_detail_row">
+                      <div class="child_block">
+                        <p>Years Old</p>
+                        <span>6 week to 1.5 Years</span>
+                      </div>
+                      <div class="child_block">
+                        <p>Class size</p>
+                        <span>12 kids</span>
+                      </div>
+                      <div class="child_block">
+                        <p>time</p>
+                        <span>8:30 AM</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card_footer">
+                    <button type="submit" class="btn btn-warning btn-block">join this program</button>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="program_card card">
+                  <div class="card-header">
+                    <img src="./assets/images/programs3.png" class="program_img" alt="program1">
+                    <div class="amount_circle amt_secondary">
+                      <h5>$945</h5>
+                      <span>monthly</span>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">Infant Program</h5>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati optio, explicabo ea quaerat
+                      dolorum animi.
+                    </p>
+                    <div class="children_detail_row">
+                      <div class="child_block">
+                        <p>Years Old</p>
+                        <span>6 week to 1.5 Years</span>
+                      </div>
+                      <div class="child_block">
+                        <p>Class size</p>
+                        <span>12 kids</span>
+                      </div>
+                      <div class="child_block">
+                        <p>time</p>
+                        <span>8:30 AM</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="program_card card">
+                  <div class="card-header">
+                    <img src="./assets/images/programs4.png" class="program_img" alt="program1">
+                    <div class="amount_circle amt_secondary">
+                      <h5>$945</h5>
+                      <span>monthly</span>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">Infant Program</h5>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati optio, explicabo ea quaerat
+                      dolorum animi.
+                    </p>
+                    <div class="children_detail_row">
+                      <div class="child_block">
+                        <p>Years Old</p>
+                        <span>6 week to 1.5 Years</span>
+                      </div>
+                      <div class="child_block">
+                        <p>Class size</p>
+                        <span>12 kids</span>
+                      </div>
+                      <div class="child_block">
+                        <p>time</p>
+                        <span>8:30 AM</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="program_card card">
+                  <div class="card-header">
+                    <img src="./assets/images/programs3.png" class="program_img program_imgs" alt="program2">
+                    <div class="amount_circle amt_secondary">
+                      <h5>$945</h5>
+                      <span>monthly</span>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">Infant Program</h5>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati optio, explicabo ea quaerat
+                      dolorum animi.
+                    </p>
+                    <div class="children_detail_row">
+                      <div class="child_block">
+                        <p>Years Old</p>
+                        <span>6 week to 1.5 Years</span>
+                      </div>
+                      <div class="child_block">
+                        <p>Class size</p>
+                        <span>12 kids</span>
+                      </div>
+                      <div class="child_block">
+                        <p>time</p>
+                        <span>8:30 AM</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card_footer">
+                    <button type="submit" class="btn btn-warning btn-block">join this program</button>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="program_card card">
+                  <div class="card-header">
+                    <img src="./assets/images/programs4.png" class="program_img program_imgs" alt="program2">
+                    <div class="amount_circle amt_secondary">
+                      <h5>$945</h5>
+                      <span>monthly</span>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">Infant Program</h5>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati optio, explicabo ea quaerat
+                      dolorum animi.
+                    </p>
+                    <div class="children_detail_row">
+                      <div class="child_block">
+                        <p>Years Old</p>
+                        <span>6 week to 1.5 Years</span>
+                      </div>
+                      <div class="child_block">
+                        <p>Class size</p>
+                        <span>12 kids</span>
+                      </div>
+                      <div class="child_block">
+                        <p>time</p>
+                        <span>8:30 AM</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card_footer">
+                    <button type="submit" class="btn btn-warning btn-block">join this program</button>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="program_card card">
+                  <div class="card-header">
+                    <img src="./assets/images/programs2.png" class="program_img" alt="program1">
+                    <div class="amount_circle amt_primary">
+                      <h5>$945</h5>
+                      <span>monthly</span>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">Infant Program</h5>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati optio, explicabo ea quaerat
+                      dolorum animi.
+                    </p>
+                    <div class="children_detail_row">
+                      <div class="child_block">
+                        <p>Years Old</p>
+                        <span>6 week to 1.5 Years</span>
+                      </div>
+                      <div class="child_block">
+                        <p>Class size</p>
+                        <span>12 kids</span>
+                      </div>
+                      <div class="child_block">
+                        <p>time</p>
+                        <span>8:30 AM</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- choose us section -->
+      <section class="chooseus_section">
+        <img src="./assets/images/cloud2.png" class="chooseus_cloud" alt="chooseus cloud">
+        <div class="container">
+          <h3 class="title">Why choose Us</h3>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum odio consectetur Rerum odio<br>commodi
+            magnam tempore fugit aliquam?
+          </p>
+          <div class="choose_cards_row">
+            <img src="./assets/images/choose_us_line.png" class="chooseus_line_img" alt="chooseus line img">
+            <div class="chooseus_card card">
+              <div class="card-header">
+                <img src="./assets/images/choose_us1.png" class="chooseus_img" alt="choose_us1">
+                <img src="./assets/images/icons/stars_icon.png" class="stars_icon" alt="stars_icon">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Great Teachers</h5>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati optio.
+                </p>
+              </div>
+            </div>
+            <div class="chooseus_card card">
+              <div class="card-header">
+                <img src="./assets/images/choose_us2.png" class="chooseus_img" alt="choose_us1">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Delisious Meals</h5>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati optio.
+                </p>
+              </div>
+            </div>
+            <div class="chooseus_card card">
+              <div class="card-header">
+                <img src="./assets/images/choose_us3.png" class="chooseus_img" alt="choose_us1">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Execellent Programmes</h5>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati optio.
+                </p>
+              </div>
+            </div>
+            <div class="chooseus_card card">
+              <div class="card-header">
+                <img src="./assets/images/choose_us4.png" class="chooseus_img" alt="choose_us1">
+                <img src="./assets/images/icons/send_icon.png" class="send_icon" alt="stars_icon">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Satis</h5>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati optio.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- parents section -->
+      <section class="parents_section">
+        <img src="./assets/images/cloud.png" class="parents_section_cloud" alt="cloud">
+        <div class="parents_card card">
+          <img class="card-img" src="./assets/images/parents_bg.png" alt="Card image">
+          <div class="card-img-overlay">
+            <h3>What Parents say</h3>
+            <p>This is a wider card with supporting text below as a natural lead-in to additional
+              content. This content is a <br>little bit longer. This content is a little bit longer.</p>
+            <h5>Mia Watsan 2</h5>
+
+            <a href="#" class="video_link mt-3" data-toggle="modal" data-target="#videoModal">
+              <img src="./assets/images/icons/video_icon.png" class="video_icon" alt="video icon">
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- footer -->
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="contact_frm_block col-md-8">
+              <h5>Quick contact</h5>
+              <form action="#" class="contact-frm form-inline" id="contact-frm" name="contact-frm">
+                <div class="row w-100">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <fieldset>
+                        <legend>Name</legend>
+                        <input type="text" class="form-control" id="contact_name" name="contact_name">
+                      </fieldset>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <fieldset>
+                        <legend>Email</legend>
+                        <input type="text" class="form-control" id="contact_email" name="contact_email">
+                      </fieldset>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <fieldset>
+                        <legend>Phone</legend>
+                        <input type="number" class="form-control" id="contact_no" name="contact_no">
+                      </fieldset>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <fieldset>
+                        <legend>Service</legend>
+                        <input type="text" class="form-control" id="contact_service" name="contact_service">
+                      </fieldset>
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <fieldset>
+                        <legend>Message</legend>
+                        <textarea type="number" class="form-control" id="contact_no" name="contact_no"></textarea>
+                      </fieldset>
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <button type="submit" class="btn btn-warning">submit</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="contact_add_block col-md-4">
+              <h5>Contact Address</h5>
+              <address>
+                7 mile Shops, west bay road<br>
+                grand cayman, cayman island
+              </address>
+              <button type="button" class="btn btn-warning active">
+                <img src="./assets/images/icons/location_icon.png" class="direction_icon" alt="">
+                google direction
+              </button>
+              <div class="social_icons_row">
+                <a href="#">
+                  <img src="./assets/images/icons/fb_icon.png" class="icons" alt="fb_icon">
+                </a>
+                <a href="#">
+                  <img src="./assets/images/icons/twitter_icon.png" class="icons" alt="twitter_icon">
+                </a>
+                <a href="#">
+                  <img src="./assets/images/icons/youtube_icon.png" class="icons" alt="youtube_icon">
+                </a>
+                <a href="#">
+                  <img src="./assets/images/icons/linkedin_icon.png" class="icons" alt="linkedin_icon">
+                </a>
+              </div>
+              <div class="timing_row">
+                <p>Monday-Friday:</p>
+                <span>9:00AM - 06:00PM</span>
+              </div>
+              <div class="timing_row">
+                <p>Saturday:</p>
+                <span>9:00AM - 06:00PM</span>
+              </div>
+            </div>
+          </div>
+          <div class="copyright_block">
+            <div class="copyright_sub_block">
+              <a href="#">Privacy Policy</a>
+              <a href="#">Site Map</a>
+            </div>
+            <div class="copyright_sub_block">
+              <p>Copyright © 2020 Bloom. All Rights Reserved.</p>
+            </div>
+            <div class="copyright_sub_block">
+              <p>Website Designed & Developed By: <a href="#"><span>netclues!</span></a></p>
+            </div>
+           
+          </div>
+        </div>
+        <div class="footer_bottom_block">
+          <img src="./assets/images/footer_bg.png" class="footer_img" alt="footer_img">
+        </div>
+      </footer>
+    </main>
+    <!-- ends: main content -->
+
+  </div>
+  <!-- ends: main wrapper -->
+
+  <!-- modal -->
+  <div class="videoModal modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="videoModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn close" data-dismiss="modal" aria-label="Close">
+            <img src="./assets/images/icons/close_icon.svg" class="close_icon" alt="close_icon">
+          </button>
+        </div>
+        <div class="modal-body">
+          <iframe width="100%" height="300" src="https://www.youtube.com/embed/yP8Qedl1gS0" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ends: modal -->
+
+  <!-- javascripts -->
+  <script src="./assets/scss/vendor/bootstrap/jquery/jquery-3.3.1.slim.min.js"></script>
+  <!-- bootstrap js -->
+  <script src="./assets/scss/vendor/bootstrap/js/popper.min.js"></script>
+  <script src="./assets/scss/vendor/bootstrap/js/bootstrap.min.js"></script>
+  <!-- swiper JS -->
+  <script src="./assets/scss/vendor/js/swiper-bundle.min.js"></script>
+  <!-- custom js -->
+  <script src="./assets/js/main.js"></script>
+</body>
+
+</html>

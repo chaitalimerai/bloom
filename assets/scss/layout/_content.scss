@@ -1,0 +1,449 @@
+.main_wrapper {
+    @extend %hw-100;
+    @include flex-properties(flex, column, null, null, null, null);
+    overflow: hidden;
+    .container {
+        @media (min-width: map_get($breakpoints, "lg")) {
+            max-width: 1370px;
+        }
+    }
+}
+.content_wrapper {
+    @extend %hw-100;
+    @include flex-properties(flex, column, null, null, null, null);
+    overflow: auto;
+    .swiper-container-horizontal > .swiper-pagination-bullets {
+        bottom: 90px !important;
+    }
+    .common_section {
+        margin: 20px 0;
+    }
+    .title {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+}
+
+.banner_slider,
+.welcome_section,
+.footer,
+.chooseus_section {
+    .container {
+        @media (min-width: map_get($breakpoints, "lg")) {
+            max-width: 1100px;
+        }
+        @media only screen and (width: map_get($breakpoints, "onlyxl")) {
+            max-width: 900px;
+        }
+    }
+}
+
+.banner_slider {
+    @extend %w-100;
+    overflow: unset !important;
+    .banner_slide_img {
+        @extend %w-100;
+        height: 500px;
+        min-height: 60vh;
+        object-fit: cover;
+    }
+
+    .swiper-pagination-bullet {
+        background: $white;
+        opacity: 1;
+        height: 10px;
+        width: 10px;
+    }
+    .swiper-pagination-bullet-active {
+        background: $orange;
+    }
+
+    .swiper-wrapper {
+        position: relative;
+        .banner_cloud {
+            position: absolute;
+            bottom: 0;
+            z-index: 4;
+            width: 100%;
+        }
+    }
+    .banner_card {
+        position: absolute;
+        top: 100px;
+        z-index: 3;
+        background-color: rgba(255, 255, 255, 0.8);
+        @media (max-width: map_get($breakpoints, "sm")) {
+            margin: 0 10px;
+            left: 0;
+        }
+        @include flex-properties(null, column, null, null, flex-start, null);
+        p {
+            margin-top: 1rem;
+            color: $primary;
+            font-size: 1.1rem;
+            @media screen and (max-width: map_get($breakpoints, "md")) {
+                font-size: $font-size-base;
+            }
+        }
+    }
+}
+
+.welcome_section {
+    position: relative;
+    .notification_row {
+        border: 1px solid rgb(249, 173, 25);
+        border-radius: $border-radius-lg;
+        @include flex-properties(flex, null, null, space-between, center, null);
+        .notification_label {
+            padding: 10px 25px;
+            background-color: $orange;
+            border-radius: $border-radius-lg;
+            margin: 0;
+        }
+        .marquee_row {
+            @extend %w-100;
+            @include flex-properties(flex, null, null, null, center, null);
+            margin: 0 20px;
+            ul {
+                @include flex-properties(flex, row, null, null, null, null);
+            }
+            li {
+                @include flex-properties(flex, null, null, null, center, null);
+                font-family: $font-family-secondary;
+                font-weight: $font-weight-medium;
+            }
+            .dot {
+                background-color: $orange;
+                border-radius: 50%;
+                background-color: #f9ad19;
+                height: 12px;
+                width: 12px;
+                margin: 0 5px;
+            }
+        }
+    }
+    .welcome_row {
+        margin: 20px 0;
+        p {
+            margin: 1.2rem 0;
+        }
+        .custom_nav {
+            margin-bottom: 1.2rem;
+            li {
+                font-family: $font-family-secondary;
+                font-weight: $font-weight-medium;
+                font-size: $font-size-sm;
+                color: $secondary;
+                @include flex-properties(flex, null, null, null, center, null);
+                .arrow {
+                    width: 0;
+                    height: 0;
+                    border-top: 5px solid transparent;
+                    border-bottom: 5px solid transparent;
+                    border-left: 7px solid $orange;
+                    margin-right: 5px;
+                }
+            }
+        }
+        .video_block {
+            .overlay {
+                position: relative;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    height: 100%;
+                    width: 100%;
+                    left: 0;
+                    top: 0;
+                    background-color: rgba(0, 0, 0, 0.5);
+                }
+                .video_link {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    z-index: 3;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 100%;
+                    height: 100%;
+                    .video_icon {
+                        height: 50px;
+                        width: 50px;
+                        object-fit: contain;
+                    }
+                }
+            }
+            .video_img {
+                height: 250px;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+    .tools_img,
+    .notification_img {
+        position: absolute;
+        @media screen and (max-width: map_get($breakpoints, "sm")) {
+            display: none;
+        }
+    }
+    .tools_img {
+        left: 50px;
+        bottom: 0;
+        max-width: 150px;
+        @media only screen and (width: map_get($breakpoints, "onlyxl")) {
+            left: 0;
+            bottom: 0;
+            max-width: 85px;
+        }
+    }
+    .notification_img {
+        right: 15px;
+        bottom: 0;
+        max-width: 180px;
+        @media only screen and (width: map_get($breakpoints, "onlyxl")) {
+            right: 0;
+            bottom: 42px;
+            max-width: 80px;
+        }
+    }
+}
+
+.program_section {
+    background: $pink100;
+    position: relative;
+    padding-top: 120px;
+
+    @media screen and (max-width: map_get($breakpoints, "md")) {
+        padding-top: 70px;
+    }
+    @media screen and (max-width: map_get($breakpoints, "sm")) {
+        padding-top: 50px;
+    }
+    .program_cloud {
+        position: absolute;
+        top: 0;
+        z-index: 4;
+        width: 100%;
+    }
+}
+
+.progrm_slider {
+    .swiper-slide {
+        height: 100%;
+    }
+    .program_card {
+        margin-bottom: 2rem;
+        padding: 0;
+        height: 100%;
+        .card-header {
+            background-color: $transparent;
+            padding: 0;
+            position: relative;
+            .amount_circle {
+                position: absolute;
+                right: 15px;
+                bottom: -30px;
+                padding: 14px 10px;
+                border-radius: 50%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                z-index: 2;
+                color: $white;
+
+                span {
+                    font-family: $font-family-secondary;
+                    text-transform: uppercase;
+                    font-size: $font-size-smaller;
+                    font-weight: 100;
+                }
+            }
+            .amt_primary {
+                background: $primary;
+            }
+            .amt_secondary {
+                background: $orange;
+            }
+        }
+        .card-body {
+            height: 100%;
+            h5 {
+                color: $primary;
+            }
+            .children_detail_row {
+                border-top: 1px solid $gray200;
+                padding-top: 15px;
+                @include flex-properties(flex, null, null, space-between, center, null);
+            }
+            .child_block {
+                @include flex-properties(flex, column, null, null, null, null);
+                padding: 0 10px;
+                border-right: 1px solid $gray100;
+                &:first-child {
+                    padding-left: 0;
+                }
+                &:last-child {
+                    border: 0;
+                }
+                p,
+                span {
+                    text-transform: capitalize;
+                }
+                p {
+                    color: $gray200;
+                    margin: 0;
+                }
+                span {
+                    font-size: $font-size-sm;
+                    color: $dark;
+                }
+            }
+        }
+        .program_img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: $border-radius-sm $border-radius-sm 0 0;
+        }
+        .program_imgs {
+            height: 160px;
+        }
+    }
+}
+
+.chooseus_section {
+    position: relative;
+    padding-top: 120px;
+
+    @media (max-width: map_get($breakpoints, "md")) {
+        padding-top: 70px;
+    }
+    @media (max-width: map_get($breakpoints, "sm")) {
+        padding-top: 50px;
+    }
+    .chooseus_cloud {
+        position: absolute;
+        top: 0;
+        z-index: 4;
+        width: 100%;
+    }
+    .title {
+        margin-bottom: 1.1rem;
+    }
+    p {
+        text-align: center;
+    }
+}
+
+.choose_cards_row {
+    @include flex-properties(flex, null, null, space-between, center, null);
+    @media (max-width: map_get($breakpoints, "sm")) {
+        @include flex-properties(null, null, wrap, null, null, null);
+    }
+    @media (max-width: map_get($breakpoints, "md")) {
+        margin: 0 20px;
+    }
+    position: relative;
+    .chooseus_line_img {
+        position: absolute;
+        width: 100%;
+        top: 95px;
+    }
+    .chooseus_card {
+        margin: 20px 10px;
+        background: $transparent;
+        @media (max-width: map_get($breakpoints, "md")) {
+            margin: 0;
+            padding: 0;
+        }
+        .chooseus_img {
+            height: 200px;
+            width: 200px;
+            object-fit: contain;
+            @media (max-width: map_get($breakpoints, "md")) {
+                width: 150px;
+            }
+            @media (max-width: map_get($breakpoints, "sm")) {
+                width: 100%;
+            }
+        }
+    }
+    .card-header {
+        position: relative;
+        padding: 0;
+        background-color: $transparent;
+        border: 0;
+        @include flex-properties(flex, null, null, center, null, null);
+    }
+    .stars_icon {
+        position: absolute;
+        left: -61px;
+        bottom: 9px;
+        @media (max-width: map_get($breakpoints, "md")) {
+            left: -30px;
+        }
+        @media (max-width: map_get($breakpoints, "sm")) {
+            left: -20px;
+        }
+        @media only screen and (width: map_get($breakpoints, "onlyxl")) {
+            left: -64px;
+            bottom: 26px;
+        }
+    }
+    .send_icon {
+        position: absolute;
+        top: 30px;
+        right: -61px;
+        @media (max-width: map_get($breakpoints, "md")) {
+            right: -21px;
+            top: 73px;
+        }
+        @media (max-width: map_get($breakpoints, "sm")) {
+            right: 0;
+        }
+    }
+    .card-body {
+        @include flex-properties(flex, column, null, null, center, null);
+        h5 {
+            color: $primary;
+            white-space: nowrap;
+            @media (max-width: map_get($breakpoints, "md")) {
+                font-size: $font-size-md;
+            }
+        }
+    }
+}
+
+.parents_section {
+    position: relative;
+    .parents_section_cloud {
+        position: absolute;
+        bottom: 0;
+        z-index: 4;
+        width: 100%;
+    }
+    .parents_card {
+        padding: 0;
+        .card-img {
+            height: 300px;
+            width: 100%;
+        }
+        .card-img-overlay {
+            @include flex-properties(flex, column, null, null, center, null);
+            padding: 3.5rem 0;
+
+            h3 {
+                margin-bottom: 1.5rem;
+            }
+            h5 {
+                color: $primary;
+            }
+            p {
+                text-align: center;
+            }
+        }
+    }
+}

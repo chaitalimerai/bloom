@@ -1,0 +1,32 @@
+.btn,
+a.btn {
+    font-family: $font-family-secondary;
+    font-weight: $font-weight-medium;
+    color: $white;
+    text-transform: uppercase;
+    font-size: $font-size-sm;
+    padding: 10px 20px;
+    outline: 0;
+    box-shadow: none !important;
+}
+
+a {
+    &.btn-warning {
+        background: $yellow;
+        border-color: $yellow;
+    }
+}
+.btn-warning {
+    background: $yellow;
+    border-color: $yellow;
+}
+.btn-warning {
+    &.active {
+        background: $transparent !important;
+        border-color: $yellow;
+        padding: 5px 15px;
+        color: $yellow !important;
+        border-radius: $border-radius-lg
+    }
+}
+

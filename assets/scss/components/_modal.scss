@@ -1,0 +1,14 @@
+.videoModal
+{
+    .close
+    {
+        border: 0;
+        background: $transparent;
+        .close_icon
+        {
+            height: 30px;
+            width: 30px;
+            object-fit: contain;
+        }
+    }
+}

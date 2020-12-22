@@ -1,0 +1,61 @@
+// Global styles goes here
+html,
+body {
+  @extend %hw-100;
+  overflow: hidden;
+  color: $dark;
+  background-color: $white;
+  font-size: $font-size-base;
+  font-family: $font-family-base;
+  font-weight: $font-weight-normal;
+
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-family-base;
+  margin: 0;
+}
+h3 {
+  color: $orange;
+  @media (max-width: map_get($breakpoints, "md")) {
+    font-size: $font-size-h3;
+  }
+}
+h5 {
+  color: $primary;
+  @media (max-width: map_get($breakpoints, "md")) {
+    font-size: $font-size-base;
+  }
+}
+p {
+  font-family: $font-family-secondary;
+  font-weight: $font-weight-medium;
+  font-size: $font-size-sm;
+  line-height: 1.3;
+  color: $secondary;
+}
+form {
+  @extend %w-100;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+button,
+a,
+label {
+  cursor: pointer;
+  margin-bottom: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
