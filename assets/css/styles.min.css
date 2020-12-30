@@ -6480,7 +6480,7 @@ a.btn-warning {
 
 @media (min-width: 992px) {
   .main_wrapper .container {
-    max-width: 1370px;
+    max-width: 1200px;
   }
 }
 
@@ -6708,9 +6708,9 @@ a.btn-warning {
 }
 
 .welcome_section .tools_img {
-  left: 50px;
+  left: 10px;
   bottom: 0;
-  max-width: 150px;
+  max-width: 120px;
 }
 
 @media only screen and (width: 1024px) {
@@ -6970,7 +6970,7 @@ a.btn-warning {
 
 @media (max-width: 768px) {
   .choose_cards_row .stars_icon {
-    left: -30px;
+    left: -34px;
   }
 }
 

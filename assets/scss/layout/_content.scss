@@ -4,7 +4,7 @@
     overflow: hidden;
     .container {
         @media (min-width: map_get($breakpoints, "lg")) {
-            max-width: 1370px;
+            max-width: 1200px;
         }
     }
 }
@@ -189,9 +189,9 @@
         }
     }
     .tools_img {
-        left: 50px;
+        left: 10px;
         bottom: 0;
-        max-width: 150px;
+        max-width: 120px;
         @media only screen and (width: map_get($breakpoints, "onlyxl")) {
             left: 0;
             bottom: 0;
@@ -385,7 +385,7 @@
         left: -61px;
         bottom: 9px;
         @media (max-width: map_get($breakpoints, "md")) {
-            left: -30px;
+            left: -34px;
         }
         @media (max-width: map_get($breakpoints, "sm")) {
             left: -20px;
